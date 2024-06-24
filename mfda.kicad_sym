@@ -4,11 +4,12 @@
 	(generator_version "8.0")
 	(symbol "chamber"
 		(pin_numbers hide)
-		(pin_names hide)
+		(pin_names
+			(offset 0) hide)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(property "Reference" "C"
+		(property "Reference" "R"
 			(at -4.445 3.81 0)
 			(effects
 				(font
@@ -16,8 +17,8 @@
 				)
 			)
 		)
-		(property "Value" ""
-			(at 0 0 0)
+		(property "Value" "${SIM.PARAMS}"
+			(at 3.81 3.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25,7 +26,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 0 0 0)
+			(at -5.334 -7.366 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -34,7 +35,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 0)
+			(at -5.334 -7.366 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -43,7 +44,52 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 0)
+			(at -5.334 -7.366 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Library" "/Users/snelgrov/kicad/verilogA_build/channel_flow.lib"
+			(at 2.794 10.414 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Name" "channel"
+			(at 0 -3.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "SUBCKT"
+			(at 0.254 -7.874 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=in 2=out"
+			(at -0.254 -5.842 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Params" "length=5 width=5u height=10u"
+			(at 12.446 5.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -168,8 +214,8 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(property "Reference" "C"
-			(at -1.27 5.08 0)
+		(property "Reference" "R"
+			(at -4.826 3.556 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -401,7 +447,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(property "Reference" "C"
+		(property "Reference" "R"
 			(at -5.08 3.81 0)
 			(effects
 				(font
@@ -641,17 +687,6 @@
 			)
 		)
 		(symbol "circulator_0_1"
-			(rectangle
-				(start -13.97 6.35)
-				(end 13.97 -8.89)
-				(stroke
-					(width 0)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
 			(polyline
 				(pts
 					(xy -2.54 -7.62) (xy -2.54 -7.62)
@@ -798,6 +833,17 @@
 			)
 		)
 		(symbol "circulator_1_1"
+			(rectangle
+				(start -13.97 6.35)
+				(end 13.97 -8.89)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
 			(arc
 				(start -8.89 0)
 				(mid -7.4021 -3.5921)
@@ -7771,17 +7817,6 @@
 			)
 		)
 		(symbol "reactor_0_1"
-			(rectangle
-				(start -21.59 10.16)
-				(end 20.32 -11.43)
-				(stroke
-					(width 0)
-					(type default)
-				)
-				(fill
-					(type none)
-				)
-			)
 			(arc
 				(start -15.24 -5.08)
 				(mid -14.4949 -6.8749)
@@ -8573,6 +8608,17 @@
 			)
 		)
 		(symbol "reactor_1_1"
+			(rectangle
+				(start -21.59 10.16)
+				(end 20.32 -11.43)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
 			(pin input line
 				(at -24.13 0 0)
 				(length 2.54)
@@ -9031,7 +9077,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(property "Reference" "U"
+		(property "Reference" "S"
 			(at -1.27 3.81 0)
 			(effects
 				(font
@@ -9131,7 +9177,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(property "Reference" "U"
+		(property "Reference" "S"
 			(at -1.27 3.81 0)
 			(effects
 				(font
@@ -9242,7 +9288,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(property "Reference" "U"
+		(property "Reference" "S"
 			(at -1.27 3.81 0)
 			(effects
 				(font

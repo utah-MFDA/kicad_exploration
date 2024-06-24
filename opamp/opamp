@@ -1,0 +1,13 @@
+*
+
+.subckt opamp
+
+
+.include "/Applications/KiCad/KiCad.app/Contents/SharedSupport/symbols/Simulation_SPICE.sp"
+V2 +5V GND DC 5 
+R2 Net-_U1-+_ /result 100k
+XU1 Net-_U1-+_ GND +5V GND /result kicad_builtin_opamp
+V1 /signal GND DC 0 SIN( 0 1 1k 0 0 0 ) AC 1  
+R1 /signal Net-_U1-+_ 100k
+
+.ends
