@@ -1,4 +1,4 @@
-23774600309971216
+23776342484916695
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -96639,8 +96639,8 @@ pinhole_325px_0
 
 
 0
-2
-2
+1
+1
 h.r.3.3
 serpentine_50px_0
 
@@ -96678,6 +96678,13 @@ serpentine_300px_0
 2
 h.r.3.3
 serpentine_300px_1
+
+
+0
+2
+2
+h.r.3.3
+test
 
 
 0

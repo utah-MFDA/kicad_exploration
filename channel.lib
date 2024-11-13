@@ -1,0 +1,13 @@
+channel
+
+.control
+pre_osdi channel.osdi
+.endc
+
+.param length=5m
+.param width=5m
+
+.model channel_model channel length=5m
+.subckt chamber IN OUT
+N1 1 2 channel_model
+.ends

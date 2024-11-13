@@ -37,9 +37,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 0.762,
-          "height": 1.524,
-          "width": 1.524
+          "drill": 0.0,
+          "height": 1.0,
+          "width": 1.0
         },
         "silk_line_width": 0.1,
         "silk_text_italic": false,
@@ -431,7 +431,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "exploration.kicad_pro",
+    "filename": "simple.kicad_pro",
     "version": 1
   },
   "net_settings": {
@@ -536,6 +536,36 @@
         },
         {
           "group_by": false,
+          "label": "Sim.Device",
+          "name": "Sim.Device",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Sim.Library",
+          "name": "Sim.Library",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Sim.Name",
+          "name": "Sim.Name",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Sim.Params",
+          "name": "Sim.Params",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Sim.Pins",
+          "name": "Sim.Pins",
+          "show": false
+        },
+        {
+          "group_by": false,
           "label": "Description",
           "name": "Description",
           "show": false
@@ -588,16 +618,8 @@
   },
   "sheets": [
     [
-      "2c0387fa-12e5-474b-81ed-7ae06152b7f8",
+      "4d2e7926-b698-4ad4-8d72-aed9ececeeb1",
       "Root"
-    ],
-    [
-      "481bfd06-53f7-40da-8587-8ed1f2dcbc2d",
-      "component"
-    ],
-    [
-      "1d23077e-b8e9-4724-a3a5-7e8296a849d9",
-      "component1"
     ]
   ],
   "text_variables": {}

@@ -2,7 +2,7 @@
 	(version 20231120)
 	(generator "eeschema")
 	(generator_version "8.0")
-	(uuid "3dd9d34f-44ed-4eac-81cc-78c98c59e16d")
+	(uuid "4d2e7926-b698-4ad4-8d72-aed9ececeeb1")
 	(paper "A4")
 	(lib_symbols
 		(symbol "mfda:chamber"
@@ -211,30 +211,25 @@
 				)
 			)
 		)
-		(symbol "mfda_spice:pressure_source"
+		(symbol "mfda:mixer_2"
 			(pin_numbers hide)
-			(pin_names
-				(offset 0.0254)
-			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
-			(property "Reference" "p"
-				(at 2.54 2.54 0)
+			(property "Reference" "M"
+				(at -1.651 4.826 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
 				)
 			)
-			(property "Value" "${SIM.PARAMS}"
-				(at 2.54 0 0)
+			(property "Value" ""
+				(at 0 0 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
 				)
 			)
 			(property "Footprint" ""
@@ -246,7 +241,7 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#sec_Independent_Sources_for"
+			(property "Datasheet" ""
 				(at 0 0 0)
 				(effects
 					(font
@@ -255,7 +250,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Pressure source, constant"
+			(property "Description" ""
 				(at 0 0 0)
 				(effects
 					(font
@@ -264,56 +259,21 @@
 					(hide yes)
 				)
 			)
-			(property "Sim.Pins" "1=plus 2=minus"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
+			(symbol "mixer_2_0_1"
+				(rectangle
+					(start -2.54 3.81)
+					(end 2.54 -3.81)
+					(stroke
+						(width 0)
+						(type default)
 					)
-					(hide yes)
-				)
-			)
-			(property "Sim.Device" "SUBCKT"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
+					(fill
+						(type none)
 					)
-					(justify left)
-					(hide yes)
 				)
-			)
-			(property "Sim.Library" "/Users/snelgrov/kicad/verilogA_build/pressure_source.lib"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Sim.Name" "pressure_src"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "simulation"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "pressure_source_0_0"
 				(polyline
 					(pts
-						(xy -1.27 0.254) (xy 1.27 0.254)
+						(xy 0 2.921) (xy -1.524 1.524)
 					)
 					(stroke
 						(width 0)
@@ -325,7 +285,7 @@
 				)
 				(polyline
 					(pts
-						(xy -0.762 -0.254) (xy -1.27 -0.254)
+						(xy -1.524 2.921) (xy 1.905 2.921) (xy 1.651 3.175) (xy 1.651 2.667) (xy 1.905 2.921)
 					)
 					(stroke
 						(width 0)
@@ -333,59 +293,14 @@
 					)
 					(fill
 						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.254 -0.254) (xy -0.254 -0.254)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 -0.254) (xy 0.762 -0.254)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(text "+"
-					(at 0 1.905 0)
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
 					)
 				)
 			)
-			(symbol "pressure_source_0_1"
-				(circle
-					(center 0 0)
-					(radius 2.54)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-			)
-			(symbol "pressure_source_1_1"
-				(pin passive line
-					(at 0 5.08 270)
+			(symbol "mixer_2_1_1"
+				(pin input line
+					(at -5.08 0 0)
 					(length 2.54)
-					(name "~"
+					(name "a"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -400,10 +315,10 @@
 						)
 					)
 				)
-				(pin passive line
-					(at 0 -5.08 90)
+				(pin input line
+					(at -5.08 -2.54 0)
 					(length 2.54)
-					(name "~"
+					(name "b"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -418,184 +333,232 @@
 						)
 					)
 				)
+				(pin output line
+					(at 5.08 0 180)
+					(length 2.54)
+					(name "y"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "mfda:tube_connector"
+			(pin_numbers hide)
+			(pin_names hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "J"
+				(at -7.366 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" ""
+				(at -2.54 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at -2.54 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at -2.54 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at -5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "tube_connector_0_1"
+				(polyline
+					(pts
+						(xy -1.905 1.016) (xy -8.255 1.016) (xy -8.255 -0.889) (xy -1.905 -0.889)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.905 1.016) (xy 0 0.635) (xy 0 -0.635) (xy -1.905 -0.889)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "tube_connector_1_1"
+				(pin passive line
+					(at 2.54 0 180)
+					(length 2.54)
+					(name "connect"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
 			)
 		)
 	)
 	(wire
 		(pts
-			(xy 133.35 85.09) (xy 133.35 74.93)
+			(xy 121.92 72.39) (xy 121.92 73.66)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "3125c792-ea15-4e2b-b4d8-d975377073bb")
+		(uuid "0b357b97-6cfe-40b8-bdba-f9c424d697fa")
 	)
 	(wire
 		(pts
-			(xy 109.22 74.93) (xy 113.03 74.93)
+			(xy 106.68 76.2) (xy 111.76 76.2)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "4fb92e50-fa6c-48f4-bd84-2c01b96c5e07")
+		(uuid "22f5fbe2-f742-486f-9700-a8689926cb29")
 	)
 	(wire
 		(pts
-			(xy 78.74 74.93) (xy 88.9 74.93)
+			(xy 130.81 72.39) (xy 121.92 72.39)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "7a391d84-ab7a-4ff0-8058-39761266e63e")
+		(uuid "54a3b79b-1d53-4382-8f84-c02de1ec150a")
 	)
 	(wire
 		(pts
-			(xy 78.74 85.09) (xy 133.35 85.09)
+			(xy 74.93 80.01) (xy 106.68 80.01)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "e171afa8-e4f6-428c-8273-e719bfc06485")
+		(uuid "6c25a837-3e30-431d-9e0a-95622940bc1c")
+	)
+	(wire
+		(pts
+			(xy 74.93 73.66) (xy 82.55 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7f436231-cede-4893-b235-e246e1c8fefa")
+	)
+	(wire
+		(pts
+			(xy 106.68 80.01) (xy 106.68 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e777de12-3702-4c86-9ebe-7e2b81f4f6b0")
+	)
+	(wire
+		(pts
+			(xy 102.87 73.66) (xy 111.76 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ec410656-169e-4574-b10c-dc876b9f4af8")
+	)
+	(label "inter"
+		(at 105.41 73.66 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "547c7308-b0f6-4159-b489-75211e8596f7")
 	)
 	(symbol
-		(lib_id "mfda_spice:pressure_source")
-		(at 78.74 80.01 0)
+		(lib_id "mfda:tube_connector")
+		(at 133.35 72.39 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "8d883417-59c3-4f06-a53e-c98eac16871a")
-		(property "Reference" "p1"
-			(at 82.55 79.8103 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "${SIM.PARAMS}"
-			(at 82.55 81.0803 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 78.74 80.01 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#sec_Independent_Sources_for"
-			(at 78.74 80.01 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Pressure source, constant"
-			(at 78.74 80.01 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=plus 2=minus"
-			(at 78.74 80.01 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Device" "SUBCKT"
-			(at 78.74 80.01 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Sim.Library" "/Users/snelgrov/kicad/verilogA_build/pressure_source.lib"
-			(at 78.74 80.01 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Name" "pressure_src"
-			(at 78.74 80.01 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "10d7064a-2d1b-46b2-a0e9-f626a18634bc")
-		)
-		(pin "1"
-			(uuid "c8460908-a654-4a17-9fd4-6759ecbeadc5")
-		)
-		(instances
-			(project ""
-				(path "/3dd9d34f-44ed-4eac-81cc-78c98c59e16d"
-					(reference "p1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "mfda:chamber")
-		(at 99.06 74.93 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "a278c5cc-28e7-4737-9c84-06885fb1d404")
-		(property "Reference" "R1"
-			(at 99.06 67.31 0)
+		(uuid "31d2ba9a-8f8b-4c78-b7ad-c69944203149")
+		(property "Reference" "J3"
+			(at 137.4775 69.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "${SIM.PARAMS}"
-			(at 99.06 69.85 0)
+		(property "Value" "~"
+			(at 137.4775 71.12 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" ""
-			(at 93.726 82.296 0)
+		(property "Footprint" "h.r.3.3:pinhole_325px_0"
+			(at 135.89 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -604,7 +567,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 93.726 82.296 0)
+			(at 135.89 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -613,52 +576,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 93.726 82.296 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Device" "SUBCKT"
-			(at 99.314 82.804 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=in 2=out"
-			(at 98.806 80.772 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Library" "/Users/snelgrov/kicad/verilogA_build/channel_flow.lib"
-			(at 101.854 64.516 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Name" "channel"
-			(at 99.06 78.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Params" "length=5 width=5u height=10u"
-			(at 111.506 69.85 0)
+			(at 138.43 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -667,14 +585,124 @@
 			)
 		)
 		(pin "1"
-			(uuid "ba997f68-2fd7-45b1-8fb4-08e8344b3046")
-		)
-		(pin "2"
-			(uuid "b1a29446-097d-4b0f-995b-31bafa537b5b")
+			(uuid "af699d0c-8b7b-4ced-b998-76356f41b488")
 		)
 		(instances
 			(project ""
-				(path "/3dd9d34f-44ed-4eac-81cc-78c98c59e16d"
+				(path "/4d2e7926-b698-4ad4-8d72-aed9ececeeb1"
+					(reference "J3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "mfda:chamber")
+		(at 92.71 73.66 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "612712cd-3330-4ce2-9502-529dab87b63a")
+		(property "Reference" "R1"
+			(at 92.71 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "${SIM.PARAMS}"
+			(at 92.71 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "h.r.3.3:serpentine_50px_0"
+			(at 87.376 81.026 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 87.376 81.026 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 87.376 81.026 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Library" "/Users/snelgrov/kicad/verilogA_build/channel_flow.lib"
+			(at 95.504 63.246 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Name" "channel"
+			(at 92.71 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "SUBCKT"
+			(at 92.964 81.534 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=in 2=out"
+			(at 92.456 79.502 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Params" "length=5 width=5u height=10u"
+			(at 105.156 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5ea84630-078a-4be7-a8ec-0870b6ec4563")
+		)
+		(pin "2"
+			(uuid "b85a4b87-91f0-4395-8a90-4d0403cb1510")
+		)
+		(instances
+			(project ""
+				(path "/4d2e7926-b698-4ad4-8d72-aed9ececeeb1"
 					(reference "R1")
 					(unit 1)
 				)
@@ -682,33 +710,33 @@
 		)
 	)
 	(symbol
-		(lib_id "mfda:chamber")
-		(at 123.19 74.93 0)
+		(lib_id "mfda:mixer_2")
+		(at 116.84 73.66 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "ddd2432e-10ae-4e2b-8006-037af9c0c2a7")
-		(property "Reference" "R2"
-			(at 123.19 67.31 0)
+		(uuid "a0a8a6aa-e52e-45c8-90f4-0cde18f1848c")
+		(property "Reference" "M1"
+			(at 116.7765 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "${SIM.PARAMS}"
-			(at 123.19 69.85 0)
+		(property "Value" "~"
+			(at 116.7765 68.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" ""
-			(at 117.856 82.296 0)
+		(property "Footprint" "h.r.3.3:diffmix_25px_0"
+			(at 116.84 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -717,7 +745,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 117.856 82.296 0)
+			(at 116.84 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -726,7 +754,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 117.856 82.296 0)
+			(at 116.84 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -734,8 +762,52 @@
 				(hide yes)
 			)
 		)
-		(property "Sim.Device" "SUBCKT"
-			(at 123.444 82.804 0)
+		(pin "2"
+			(uuid "295a9ff9-3279-4faa-a672-dc69d2e770c9")
+		)
+		(pin "1"
+			(uuid "f0838010-7bab-4bac-9166-b2dc133bcf27")
+		)
+		(pin "3"
+			(uuid "3f44ad48-e597-46a6-ac5c-fffb492b2552")
+		)
+		(instances
+			(project ""
+				(path "/4d2e7926-b698-4ad4-8d72-aed9ececeeb1"
+					(reference "M1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "mfda:tube_connector")
+		(at 72.39 80.01 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a7b60189-36f7-49a8-8160-522994063807")
+		(property "Reference" "J2"
+			(at 68.2625 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "~"
+			(at 68.2625 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "h.r.3.3:pinhole_325px_0"
+			(at 69.85 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -743,8 +815,8 @@
 				(hide yes)
 			)
 		)
-		(property "Sim.Pins" "1=in 2=out"
-			(at 122.936 80.772 0)
+		(property "Datasheet" ""
+			(at 69.85 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -752,26 +824,8 @@
 				(hide yes)
 			)
 		)
-		(property "Sim.Library" "/Users/snelgrov/kicad/verilogA_build/channel_flow.lib"
-			(at 125.984 64.516 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Name" "channel"
-			(at 123.19 78.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Params" "length=5 width=5u height=10u"
-			(at 135.636 69.85 0)
+		(property "Description" ""
+			(at 67.31 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -780,15 +834,77 @@
 			)
 		)
 		(pin "1"
-			(uuid "364a80ec-8980-46fe-b39c-276826e9433c")
-		)
-		(pin "2"
-			(uuid "37109136-feea-4281-aed9-12605f16d550")
+			(uuid "459a11f5-797c-4150-ac46-8c1dcf521308")
 		)
 		(instances
-			(project "spice_test"
-				(path "/3dd9d34f-44ed-4eac-81cc-78c98c59e16d"
-					(reference "R2")
+			(project ""
+				(path "/4d2e7926-b698-4ad4-8d72-aed9ececeeb1"
+					(reference "J2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "mfda:tube_connector")
+		(at 72.39 73.66 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b52e3fd5-51d4-43bb-b4a2-23b06d27fe46")
+		(property "Reference" "J1"
+			(at 68.2625 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "~"
+			(at 68.2625 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "h.r.3.3:pinhole_325px_0"
+			(at 69.85 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 69.85 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 67.31 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9449c868-6004-4e8f-9c0e-e1c5e9385166")
+		)
+		(instances
+			(project ""
+				(path "/4d2e7926-b698-4ad4-8d72-aed9ececeeb1"
+					(reference "J1")
 					(unit 1)
 				)
 			)

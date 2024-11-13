@@ -5477,7 +5477,7 @@
 		)
 		(symbol "mixer_2_1_1"
 			(pin input line
-				(at -5.207 0 0)
+				(at -5.08 0 0)
 				(length 2.54)
 				(name "a"
 					(effects
